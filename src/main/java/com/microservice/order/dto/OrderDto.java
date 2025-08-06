@@ -1,5 +1,7 @@
 package com.microservice.order.dto;
 
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,5 +15,5 @@ public class OrderDto {
 	private Double amount;
 	private Integer userId;
 	private String userName;
-	
+	private LocalDateTime orderDate;
 }

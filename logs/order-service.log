@@ -1,0 +1,504 @@
+12:18:50.646 [main] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:18:50.650 [main] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:18:50.651 [main] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:18:50.651 [main] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:18:50.792 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:18:50.792 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:18:50.792 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:18:50.794 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:18:51.292 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 65076 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+12:18:51.297 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+12:18:51.299 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+12:18:51.360 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+12:18:51.360 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+12:18:52.196 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:18:52.286 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+12:18:52.825 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+12:18:52.908 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1547 ms
+12:18:53.109 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:18:53.169 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+12:18:53.216 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:18:53.583 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:18:54.064 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+12:18:54.065 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+12:18:54.085 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:18:54.964 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:18:55.019 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:18:55.034 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+12:18:55.045 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+12:18:55.205 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+12:18:55.227 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+12:18:55.270 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:18:55.627 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:18:55.694 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+12:18:55.702 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 4.899 seconds (process running for 6.476)
+12:18:55.709 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+12:18:55.711 [main] ERROR com.microservice.order.OrderApplication - Failed to start Order Service Application
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:537) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.5.4.jar:3.5.4]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.4.jar:3.5.4]
+	at com.microservice.order.OrderApplication.main(OrderApplication.java:20) [classes/:?]
+12:21:19.952 [RMI TCP Connection(11)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+12:21:19.957 [RMI TCP Connection(11)-127.0.0.1] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+12:21:20.662 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+12:21:20.668 [RMI TCP Connection(11)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:21:25.429 [main] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:21:25.434 [main] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:21:25.434 [main] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:21:25.434 [main] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:21:25.586 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:21:25.586 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:21:25.586 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:21:25.586 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:21:26.086 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 27760 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+12:21:26.091 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+12:21:26.093 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+12:21:26.179 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+12:21:26.180 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+12:21:27.087 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:21:27.206 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interface.
+12:21:27.824 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+12:21:27.907 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1725 ms
+12:21:28.107 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:21:28.161 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+12:21:28.200 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:21:28.577 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:21:29.071 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+12:21:29.077 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+12:21:29.104 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:21:30.205 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:21:30.263 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:21:30.281 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+12:21:30.293 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+12:21:30.489 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+12:21:30.513 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+12:21:30.565 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:21:30.995 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:21:31.081 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+12:21:31.097 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 5.507 seconds (process running for 7.23)
+12:21:31.103 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+12:21:31.106 [main] ERROR com.microservice.order.OrderApplication - Failed to start Order Service Application
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:537) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.5.4.jar:3.5.4]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.4.jar:3.5.4]
+	at com.microservice.order.OrderApplication.main(OrderApplication.java:20) [classes/:?]
+12:21:32.714 [RMI TCP Connection(7)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+12:21:32.717 [RMI TCP Connection(7)-127.0.0.1] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+12:21:33.655 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+12:21:33.662 [RMI TCP Connection(7)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:21:49.688 [main] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:21:49.695 [main] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:21:49.697 [main] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:21:49.697 [main] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:21:49.870 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:21:49.870 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:21:49.870 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:21:49.870 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:21:50.448 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 65100 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+12:21:50.460 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+12:21:50.464 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+12:21:50.544 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+12:21:50.544 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+12:21:52.318 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:21:52.560 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 208 ms. Found 1 JPA repository interface.
+12:21:53.291 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+12:21:53.374 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2829 ms
+12:21:53.575 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:21:53.653 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+12:21:53.700 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:21:54.045 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:21:54.535 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+12:21:54.536 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+12:21:54.560 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:21:56.013 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:21:56.124 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:21:56.157 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+12:21:56.185 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+12:21:56.650 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+12:21:56.692 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+12:21:56.789 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:21:57.587 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:21:57.703 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+12:21:57.728 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 7.853 seconds (process running for 10.336)
+12:21:57.738 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+12:21:57.741 [main] ERROR com.microservice.order.OrderApplication - Failed to start Order Service Application
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:537) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.5.4.jar:3.5.4]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.5.4.jar:3.5.4]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.4.jar:3.5.4]
+	at com.microservice.order.OrderApplication.main(OrderApplication.java:20) [classes/:?]
+12:22:37.243 [File Watcher] INFO  org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:22:37.248 [Thread-5] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+12:22:37.697 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+12:22:37.700 [Thread-5] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:23:05.972 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:23:05.972 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:23:05.973 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:23:05.973 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:23:06.083 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 65100 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+12:23:06.084 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+12:23:06.084 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+12:23:06.348 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:23:06.366 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+12:23:06.491 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+12:23:06.538 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 451 ms
+12:23:06.588 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:23:06.590 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:23:06.600 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:23:06.622 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+12:23:06.622 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+12:23:06.623 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:23:06.669 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:23:06.677 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:23:06.687 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+12:23:06.688 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+12:23:06.728 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+12:23:06.728 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+12:23:06.744 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:23:06.882 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:23:06.901 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+12:23:06.907 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 0.927 seconds (process running for 79.516)
+12:23:06.910 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:23:06.912 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+12:23:22.720 [File Watcher] INFO  org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:23:22.722 [Thread-7] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+12:23:23.863 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+12:23:23.867 [Thread-7] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:23:23.953 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:23:23.954 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:23:23.954 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:23:23.954 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:23:24.038 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 65100 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+12:23:24.040 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+12:23:24.040 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+12:23:24.294 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:23:24.320 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+12:23:24.431 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+12:23:24.460 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 416 ms
+12:23:24.527 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:23:24.530 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:23:24.542 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:23:24.563 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+12:23:24.563 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+12:23:24.563 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:23:24.602 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:23:24.611 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:23:24.624 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+12:23:24.626 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+12:23:24.666 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+12:23:24.666 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+12:23:24.679 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:23:24.782 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:23:24.800 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+12:23:24.806 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 0.849 seconds (process running for 97.415)
+12:23:24.808 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:23:24.808 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+12:24:12.612 [File Watcher] INFO  org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:24:12.617 [Thread-17] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+12:24:15.184 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+12:24:15.187 [Thread-17] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:24:15.252 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+12:24:15.252 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+12:24:15.252 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+12:24:15.252 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+12:24:15.290 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 65100 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+12:24:15.290 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+12:24:15.290 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+12:24:15.442 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:24:15.458 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+12:24:15.510 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+12:24:15.526 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 235 ms
+12:24:15.552 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:24:15.554 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:24:15.559 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:24:15.572 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+12:24:15.572 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+12:24:15.572 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+12:24:15.594 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:24:15.600 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:24:15.607 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+12:24:15.608 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+12:24:15.636 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+12:24:15.636 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+12:24:15.643 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:24:15.699 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:24:15.712 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path '/'
+12:24:15.715 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 0.462 seconds (process running for 148.324)
+12:24:15.716 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:24:15.716 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+12:24:48.418 [http-nio-8085-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:24:48.420 [http-nio-8085-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:24:48.598 [http-nio-8085-exec-2] INFO  com.microservice.order.controller.OrderController - Received request to place order: OrderDto(orderId=null, amount=1525.0, userId=null, userName=null, orderDate=null)
+12:24:48.601 [http-nio-8085-exec-2] INFO  com.microservice.order.service.OrderService - Placing order: OrderDto(orderId=null, amount=1525.0, userId=null, userName=null, orderDate=null)
+12:24:48.601 [http-nio-8085-exec-2] DEBUG com.microservice.order.service.OrderService - Calling user service to get user details at URL: http://localhost:8086/users/getUser/{id}
+12:24:48.635 [http-nio-8085-exec-2] ERROR com.microservice.order.service.OrderService - Error occurred while placing order: OrderDto(orderId=null, amount=1525.0, userId=null, userName=null, orderDate=null)
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8086/users/getUser/1": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415) ~[spring-web-6.2.9.jar:6.2.9]
+	at com.microservice.order.service.OrderService.placeOrder(OrderService.java:58) [classes/:?]
+	at com.microservice.order.controller.OrderController.placeOrder(OrderController.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) [spring-webmvc-6.2.9.jar:6.2.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) [tomcat-embed-core-10.1.43.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.2.9.jar:6.2.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.43.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at java.lang.Thread.run(Thread.java:840) [?:?]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.connect(Net.java:579) ~[?:?]
+	at sun.nio.ch.Net.connect(Net.java:568) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593) ~[?:?]
+	at java.net.Socket.connect(Socket.java:633) ~[?:?]
+	at java.net.Socket.connect(Socket.java:583) ~[?:?]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[?:?]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:533) ~[?:?]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:638) ~[?:?]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:281) ~[?:?]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:386) ~[?:?]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:408) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057) ~[?:?]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900) ~[spring-web-6.2.9.jar:6.2.9]
+	... 54 more
+12:24:48.637 [http-nio-8085-exec-2] ERROR com.microservice.order.controller.OrderController - Error occurred while placing order: OrderDto(orderId=null, amount=1525.0, userId=null, userName=null, orderDate=null)
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8086/users/getUser/1": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415) ~[spring-web-6.2.9.jar:6.2.9]
+	at com.microservice.order.service.OrderService.placeOrder(OrderService.java:58) ~[classes/:?]
+	at com.microservice.order.controller.OrderController.placeOrder(OrderController.java:46) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) [spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) [spring-webmvc-6.2.9.jar:6.2.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) [tomcat-embed-core-10.1.43.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) [spring-webmvc-6.2.9.jar:6.2.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [tomcat-embed-core-10.1.43.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) [spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-embed-core-10.1.43.jar:10.1.43]
+	at java.lang.Thread.run(Thread.java:840) [?:?]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.connect(Net.java:579) ~[?:?]
+	at sun.nio.ch.Net.connect(Net.java:568) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593) ~[?:?]
+	at java.net.Socket.connect(Socket.java:633) ~[?:?]
+	at java.net.Socket.connect(Socket.java:583) ~[?:?]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[?:?]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:533) ~[?:?]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:638) ~[?:?]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:281) ~[?:?]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:386) ~[?:?]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:408) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057) ~[?:?]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900) ~[spring-web-6.2.9.jar:6.2.9]
+	... 54 more
+12:25:23.367 [http-nio-8085-exec-4] INFO  com.microservice.order.controller.OrderController - Received request to place order: OrderDto(orderId=null, amount=1525.0, userId=null, userName=null, orderDate=null)
+12:25:23.367 [http-nio-8085-exec-4] INFO  com.microservice.order.service.OrderService - Placing order: OrderDto(orderId=null, amount=1525.0, userId=null, userName=null, orderDate=null)
+12:25:23.367 [http-nio-8085-exec-4] DEBUG com.microservice.order.service.OrderService - Calling user service to get user details at URL: http://localhost:8086/users/getUser/{id}
+12:25:23.621 [http-nio-8085-exec-4] INFO  com.microservice.order.service.OrderService - Retrieved user data for order: UserDto(id=1, name=Udit)
+12:25:23.622 [http-nio-8085-exec-4] DEBUG com.microservice.order.service.OrderService - Created order entity: com.microservice.order.entity.Order@24e11ec7
+12:25:23.654 [http-nio-8085-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        orders
+        (amount, order_date, user_id, user_name) 
+    values
+        (?, ?, ?, ?)
+12:25:23.700 [http-nio-8085-exec-4] INFO  com.microservice.order.service.OrderService - Order saved successfully with ID: 2
+12:25:23.714 [http-nio-8085-exec-4] DEBUG com.microservice.order.service.OrderService - Mapped order to DTO: OrderDto(orderId=2, amount=1525.0, userId=1, userName=Udit, orderDate=2025-08-06T12:25:23.622669900)
+12:25:23.714 [http-nio-8085-exec-4] INFO  com.microservice.order.controller.OrderController - Order placed successfully with ID: 2
+12:26:12.286 [RMI TCP Connection(24)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+12:26:12.288 [RMI TCP Connection(24)-127.0.0.1] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+12:26:12.845 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+12:26:12.848 [RMI TCP Connection(24)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
