@@ -1,6 +1,7 @@
 package com.microservice.order.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,4 +17,5 @@ public class OrderDto {
 	private Integer userId;
 	private String userName;
 	private LocalDateTime orderDate;
+	private List<OrderLineItemDto> orderLineItems;
 }
