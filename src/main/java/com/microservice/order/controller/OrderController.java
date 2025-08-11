@@ -51,6 +51,20 @@ public class OrderController {
 			return ResponseEntity.internalServerError().build();
 		}
 	}
+	
+	@PostMapping("/cancel/{orderId}")
+	public ResponseEntity<OrderDto> cancelOrder(@PathVariable Integer orderId) {
+		logger.info("Received request to cancel order: {}", orderId);
+		
+		try {
+			OrderDto cancelOrder = orderService.cancelOrder(orderId);
+			logger.info("Order deleted successfully with ID: {}", orderId);
+			return ResponseEntity.ok(cancelOrder);
+		} catch (Exception e) {
+			logger.error("Error occurred while deleting order: {}", orderId, e);
+			return ResponseEntity.internalServerError().build();
+		}
+	}
 
 	@GetMapping("/test-logging")
 	public ResponseEntity<String> testLogging() {

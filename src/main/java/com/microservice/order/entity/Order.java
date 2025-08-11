@@ -32,7 +32,7 @@ public class Order {
 	private Integer userId;
 	private String userName;
 	private LocalDateTime orderDate;
-
+	private String status;
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "order_id")
 	private List<OrderLineItem> orderLineItems;

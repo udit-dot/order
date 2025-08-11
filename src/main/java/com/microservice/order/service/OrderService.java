@@ -22,48 +22,41 @@ import com.microservice.order.repo.OrderRepository;
 
 @Service
 public class OrderService {
-	
+
 	private static final Logger logger = LogManager.getLogger(OrderService.class);
-	
+
 	@Autowired
 	RestTemplate restTemplate;
-	
+
 	@Autowired
 	OrderRepository orderRepository;
-	
+
 	@Autowired
 	ModelMapper mapper;
-	
-	public OrderDto getDetails(Integer id) {
-		logger.debug("Getting order details for ID: {}", id);
-		
+
+	public OrderDto getDetails(Integer orderId) {
+		logger.debug("Getting order details for ID: {}", orderId);
+
 		try {
-			String url = "http://localhost:8086/users";
-			logger.debug("Calling user service at URL: {}", url);
-			
-			UserDto dtoResponse = restTemplate.getForObject(url, UserDto.class);
-			logger.info("Successfully retrieved user data: {}", dtoResponse);
-			
-			OrderDto orderDto = new OrderDto(id, 1500.00, dtoResponse.getId(), dtoResponse.getName(), LocalDateTime.now(), null);
-			logger.debug("Created order DTO: {}", orderDto);
-			
-			return orderDto;
+			Order order = orderRepository.findById(orderId)
+					.orElseThrow(() -> new RuntimeException("Order not found with id: " + orderId));
+			return mapper.map(order, OrderDto.class);
 		} catch (Exception e) {
-			logger.error("Error occurred while getting order details for ID: {}", id, e);
+			logger.error("Error occurred while getting order details for ID: {}", orderId, e);
 			throw e;
 		}
 	}
-	
+
 	public OrderDto placeOrder(OrderDto orderDto) {
 		logger.info("Placing order: {}", orderDto);
-		
+
 		try {
 			String url = "http://localhost:8086/users/getUser/{id}";
 			logger.debug("Calling user service to get user details at URL: {}", url);
-			
+
 			UserDto dtoResponse = restTemplate.getForObject(url, UserDto.class, orderDto.getUserId());
 			logger.info("Retrieved user data for order: {}", dtoResponse);
-			
+
 			if (dtoResponse == null) {
 				throw new RuntimeException("User not found with id: " + orderDto.getUserId());
 			}
@@ -72,7 +65,7 @@ public class OrderService {
 			order.setUserId(dtoResponse.getId());
 			order.setUserName(dtoResponse.getName());
 			order.setOrderDate(LocalDateTime.now());
-			
+
 			// Process order line items and fetch product details with inventory validation
 			List<OrderLineItem> orderLineItemsList = new ArrayList<>();
 			Double totalAmount = 0.0;
@@ -80,7 +73,8 @@ public class OrderService {
 				for (OrderLineItemDto lineItemDto : orderDto.getOrderLineItems()) {
 					// Fetch product details with inventory check from Product Service
 					String productUrl = "http://localhost:8087/products/{id}";
-					ProductDto productDto = restTemplate.getForObject(productUrl, ProductDto.class, lineItemDto.getProductId());
+					ProductDto productDto = restTemplate.getForObject(productUrl, ProductDto.class,
+							lineItemDto.getProductId());
 
 					if (productDto == null) {
 						throw new RuntimeException("Product not found with id: " + lineItemDto.getProductId());
@@ -123,18 +117,60 @@ public class OrderService {
 			}
 			order.setAmount(totalAmount);
 			order.setOrderLineItems(orderLineItemsList);
+			order.setStatus("PLACED");
 			// Save the order to database
 			Order savedOrder = orderRepository.save(order);
 			logger.info("Order saved successfully with ID: {}", savedOrder.getOrderId());
 			// Convert back to DTO for response using ModelMapper
 			OrderDto result = mapper.map(savedOrder, OrderDto.class);
 			logger.debug("Mapped order to DTO: {}", result);
-			
+
 			return result;
 		} catch (Exception e) {
 			logger.error("Error occurred while placing order: {}", orderDto, e);
 			throw e;
 		}
 	}
-	
+
+	public OrderDto cancelOrder(Integer orderId) {
+		logger.info("Cancelling order with ID: {}", orderId);
+		try {
+			Order order = orderRepository.findById(orderId)
+					.orElseThrow(() -> new RuntimeException("Order not found with id: " + orderId));
+
+			if (order.getOrderLineItems() != null) {
+				for (OrderLineItem lineItem : order.getOrderLineItems()) {
+					try {
+						String productUrl = "http://localhost:8087/products/{id}";
+						ProductDto productDto = restTemplate.getForObject(productUrl, ProductDto.class,
+								lineItem.getProductId());
+
+						if (productDto == null || productDto.getInventory() == null) {
+							throw new RuntimeException(
+									"Product or inventory not found for ID: " + lineItem.getProductId());
+						}
+
+						Integer restoredQuantity = productDto.getInventory().getQuantity() + lineItem.getQuantity();
+						String inventoryUpdateUrl = "http://localhost:8087/inventory/"
+								+ productDto.getInventory().getInventoryId() + "/quantity?quantity=" + restoredQuantity;
+
+						logger.debug("Restoring inventory via URL: {}", inventoryUpdateUrl);
+						restTemplate.put(inventoryUpdateUrl, null);
+
+					} catch (Exception ex) {
+						logger.error("Failed to restore inventory for product ID: {}", lineItem.getProductId(), ex);
+						throw ex;
+					}
+				}
+			}
+			order.setStatus("CANCELLED");
+			Order cancelledOrder = orderRepository.save(order);
+			logger.info("Order with ID {} has been cancelled successfully.", orderId);
+			return mapper.map(cancelledOrder, OrderDto.class);
+		} catch (Exception e) {
+			logger.error("Error occurred while cancelling order ID: {}", orderId, e);
+			throw e;
+		}
+	}
+
 }
