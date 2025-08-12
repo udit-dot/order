@@ -11,6 +11,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import com.microservice.order.feign.UserFeignClient;
+import com.microservice.order.feign.ProductFeignClient;
 
 import com.microservice.order.dto.OrderDto;
 import com.microservice.order.dto.OrderLineItemDto;
@@ -26,13 +28,96 @@ public class OrderService {
 	private static final Logger logger = LogManager.getLogger(OrderService.class);
 
 	@Autowired
-	RestTemplate restTemplate;
-
-	@Autowired
 	OrderRepository orderRepository;
 
 	@Autowired
 	ModelMapper mapper;
+
+	@Autowired
+	RestTemplate restTemplate;
+
+	@Autowired
+	UserFeignClient userFeignClient;
+
+	@Autowired
+	ProductFeignClient productFeignClient;
+
+	// Example method using Feign client for user and product service
+	public OrderDto placeOrderWithFeign(OrderDto orderDto) {
+		logger.info("Placing order with Feign: {}", orderDto);
+		try {
+			// Get user details using Feign
+			UserDto dtoResponse = userFeignClient.getUserById(orderDto.getUserId());
+			logger.info("Retrieved user data for order (Feign): {}", dtoResponse);
+			if ("Unknown User (Fallback)".equals(dtoResponse.getName())) {
+				logger.warn("User service unavailable, using fallback user for id: {}", orderDto.getUserId());
+			}
+			Order order = mapper.map(orderDto, Order.class);
+			order.setUserId(dtoResponse.getId());
+			order.setUserName(dtoResponse.getName());
+			order.setOrderDate(LocalDateTime.now());
+			List<OrderLineItem> orderLineItemsList = new ArrayList<>();
+			Double totalAmount = 0.0;
+			if (orderDto.getOrderLineItems() != null) {
+				for (OrderLineItemDto lineItemDto : orderDto.getOrderLineItems()) {
+					ProductDto productDto = productFeignClient.getProductById(lineItemDto.getProductId());
+					if (productDto == null) {
+						throw new RuntimeException("Product not found with id: " + lineItemDto.getProductId());
+					}
+					if (productDto.getInventory() == null) {
+						throw new RuntimeException("Inventory not found for product id: " + lineItemDto.getProductId());
+					}
+					if ("OUT_OF_STOCK".equals(productDto.getInventory().getStatus())) {
+						throw new RuntimeException("Product " + productDto.getProductName()
+								+ " is not available for ordering. Status: " + productDto.getInventory().getStatus());
+					}
+					if (productDto.getInventory().getQuantity() < lineItemDto.getQuantity()) {
+						throw new RuntimeException("Insufficient quantity for product " + productDto.getProductName()
+								+ ". Available: " + productDto.getInventory().getQuantity() + ", Requested: "
+								+ lineItemDto.getQuantity());
+					}
+					Integer newQuantity = productDto.getInventory().getQuantity() - lineItemDto.getQuantity();
+					productFeignClient.updateInventoryQuantity(productDto.getInventory().getInventoryId(), newQuantity);
+					OrderLineItem orderLineItem = mapper.map(lineItemDto, OrderLineItem.class);
+					orderLineItem.setProductId(productDto.getProductId());
+					orderLineItem.setProductName(productDto.getProductName());
+					orderLineItem.setProductRate(productDto.getPrice());
+					orderLineItem.setItemSubTotal(productDto.getPrice() * lineItemDto.getQuantity());
+					orderLineItem.setSkuCode("SKU-" + UUID.randomUUID().toString() + "-" + productDto.getProductId());
+					totalAmount += orderLineItem.getItemSubTotal();
+					orderLineItemsList.add(orderLineItem);
+				}
+			}
+			order.setAmount(totalAmount);
+			order.setOrderLineItems(orderLineItemsList);
+			order.setStatus("PLACED");
+			Order savedOrder = orderRepository.save(order);
+			logger.info("Order saved successfully with ID (Feign): {}", savedOrder.getOrderId());
+			OrderDto result = mapper.map(savedOrder, OrderDto.class);
+			logger.debug("Mapped order to DTO (Feign): {}", result);
+			return result;
+		} catch (Exception e) {
+			logger.error("Error occurred while placing order with Feign: {}", orderDto, e);
+			throw e;
+		}
+	}
+
+	public UserDto getUserFromOrderId(Integer orderId) {
+		logger.debug("Getting User details for ID: {}", orderId);
+
+		try {
+			Order order = orderRepository.findById(orderId)
+					.orElseThrow(() -> new RuntimeException("Order not found with id: " + orderId));
+			UserDto userDto = userFeignClient.getUserById(order.getUserId());
+			if ("Unknown User (Fallback)".equals(userDto.getName())) {
+				logger.warn("User service unavailable, using fallback user for id: {}", order.getUserId());
+			}
+			return userDto;
+		} catch (Exception e) {
+			logger.error("Error occurred while getting order details for ID: {}", orderId, e);
+			throw e;
+		}
+	}
 
 	public OrderDto getDetails(Integer orderId) {
 		logger.debug("Getting order details for ID: {}", orderId);
