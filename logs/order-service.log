@@ -5244,3 +5244,222 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 11:42:56.214 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
 11:42:56.215 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
 11:42:56.215 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+11:59:21.825 [main] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+11:59:21.832 [main] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+11:59:21.832 [main] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+11:59:21.832 [main] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+11:59:22.147 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+11:59:22.147 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+11:59:22.148 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+11:59:22.148 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+11:59:23.289 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 63576 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+11:59:23.294 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.2.12, Spring v6.1.15
+11:59:23.295 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+11:59:23.412 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11:59:23.412 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11:59:25.541 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:59:25.768 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 193 ms. Found 1 JPA repository interface.
+11:59:26.473 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=a6901c53-1d3e-3e84-a5ac-c45b94fdd146
+11:59:28.083 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+11:59:28.380 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4965 ms
+11:59:29.069 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:59:29.286 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.10.Final
+11:59:29.407 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:59:30.169 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:59:31.233 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+11:59:31.237 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+11:59:35.100 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:59:35.328 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:59:36.253 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+11:59:36.316 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+11:59:36.333 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+11:59:36.379 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+11:59:36.838 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:59:37.374 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11:59:41.776 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path ''
+11:59:42.971 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 20.815 seconds (process running for 23.098)
+11:59:42.983 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+11:59:42.989 [main] DEBUG com.microservice.order.OrderApplication - DevTools restart detected - this is normal behavior
+12:00:51.990 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:00:51.993 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+12:00:52.057 [http-nio-8085-exec-1] INFO  com.microservice.order.controller.OrderController - Received request to get User details for ID: 8
+12:00:52.057 [http-nio-8085-exec-1] DEBUG com.microservice.order.service.OrderService - Getting User details for ID: 8
+12:00:52.158 [http-nio-8085-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.order_id,
+        o1_0.amount,
+        o1_0.order_date,
+        o1_0.status,
+        o1_0.user_id,
+        o1_0.user_name 
+    from
+        orders o1_0 
+    where
+        o1_0.order_id=?
+12:00:52.255 [http-nio-8085-exec-1] WARN  com.microservice.order.service.OrderService - User service unavailable, using fallback user for id: 2
+12:00:52.255 [http-nio-8085-exec-1] INFO  com.microservice.order.controller.OrderController - Successfully retrieved User details for ID: 8
+12:02:35.756 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+12:02:38.079 [RMI TCP Connection(5)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:33:46.874 [main] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+10:33:46.881 [main] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+10:33:46.881 [main] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+10:33:46.881 [main] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+10:33:47.167 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+10:33:47.167 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+10:33:47.167 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+10:33:47.168 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+10:33:48.319 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 33964 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+10:33:48.323 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.2.12, Spring v6.1.15
+10:33:48.324 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+10:33:48.409 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10:33:48.409 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10:33:49.791 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10:33:49.891 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interface.
+10:33:50.484 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=a6901c53-1d3e-3e84-a5ac-c45b94fdd146
+10:33:52.572 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+10:33:52.892 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4482 ms
+10:33:53.587 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10:33:53.786 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.10.Final
+10:33:53.898 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+10:33:54.505 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+10:33:55.468 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+10:33:55.472 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+10:33:57.699 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+10:33:57.883 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:33:58.651 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+10:33:58.703 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+10:33:58.715 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+10:33:58.746 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+10:33:59.003 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:33:59.238 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+10:34:02.788 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path ''
+10:34:03.742 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 16.569 seconds (process running for 18.953)
+10:34:03.753 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+10:34:03.759 [main] DEBUG com.microservice.order.OrderApplication - DevTools restart detected - this is normal behavior
+10:34:31.512 [http-nio-8085-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10:34:31.514 [http-nio-8085-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+10:34:31.594 [http-nio-8085-exec-2] INFO  com.microservice.order.controller.OrderController - Received request to get User details for ID: 8
+10:34:31.594 [http-nio-8085-exec-2] DEBUG com.microservice.order.service.OrderService - Getting User details for ID: 8
+10:34:31.704 [http-nio-8085-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.order_id,
+        o1_0.amount,
+        o1_0.order_date,
+        o1_0.status,
+        o1_0.user_id,
+        o1_0.user_name 
+    from
+        orders o1_0 
+    where
+        o1_0.order_id=?
+10:34:31.811 [http-nio-8085-exec-2] WARN  com.microservice.order.service.OrderService - User service unavailable, using fallback user for id: 2
+10:34:31.812 [http-nio-8085-exec-2] INFO  com.microservice.order.controller.OrderController - Successfully retrieved User details for ID: 8
+10:35:29.489 [http-nio-8085-exec-3] INFO  com.microservice.order.controller.OrderController - Received request to get User details for ID: 8
+10:35:29.489 [http-nio-8085-exec-3] DEBUG com.microservice.order.service.OrderService - Getting User details for ID: 8
+10:35:29.492 [http-nio-8085-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.order_id,
+        o1_0.amount,
+        o1_0.order_date,
+        o1_0.status,
+        o1_0.user_id,
+        o1_0.user_name 
+    from
+        orders o1_0 
+    where
+        o1_0.order_id=?
+10:35:29.871 [http-nio-8085-exec-3] INFO  com.microservice.order.controller.OrderController - Successfully retrieved User details for ID: 8
+10:58:50.559 [http-nio-8085-exec-5] INFO  com.microservice.order.controller.OrderController - Received request to get User details for ID: 8
+10:58:50.559 [http-nio-8085-exec-5] DEBUG com.microservice.order.service.OrderService - Getting User details for ID: 8
+10:58:50.563 [http-nio-8085-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.order_id,
+        o1_0.amount,
+        o1_0.order_date,
+        o1_0.status,
+        o1_0.user_id,
+        o1_0.user_name 
+    from
+        orders o1_0 
+    where
+        o1_0.order_id=?
+10:58:50.630 [http-nio-8085-exec-5] WARN  com.microservice.order.service.OrderService - User service unavailable, using fallback user for id: 2
+10:58:50.630 [http-nio-8085-exec-5] INFO  com.microservice.order.controller.OrderController - Successfully retrieved User details for ID: 8
+10:59:46.867 [http-nio-8085-exec-7] INFO  com.microservice.order.controller.OrderController - Received request to get User details for ID: 8
+10:59:46.868 [http-nio-8085-exec-7] DEBUG com.microservice.order.service.OrderService - Getting User details for ID: 8
+10:59:46.870 [http-nio-8085-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        o1_0.order_id,
+        o1_0.amount,
+        o1_0.order_date,
+        o1_0.status,
+        o1_0.user_id,
+        o1_0.user_name 
+    from
+        orders o1_0 
+    where
+        o1_0.order_id=?
+10:59:46.886 [http-nio-8085-exec-7] WARN  com.microservice.order.service.OrderService - User service unavailable, using fallback user for id: 2
+10:59:46.886 [http-nio-8085-exec-7] INFO  com.microservice.order.controller.OrderController - Successfully retrieved User details for ID: 8
+11:06:31.335 [File Watcher] INFO  org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+11:06:33.086 [Thread-5] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:06:33.286 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+11:06:33.286 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+11:06:33.286 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+11:06:33.287 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+11:06:33.815 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 33964 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+11:06:33.816 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.2.12, Spring v6.1.15
+11:06:33.817 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+11:06:34.224 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:06:34.273 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+11:06:34.380 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=a6901c53-1d3e-3e84-a5ac-c45b94fdd146
+11:06:34.751 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+11:06:34.819 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 999 ms
+11:06:34.996 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:06:35.001 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:06:35.014 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:06:35.053 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+11:06:35.053 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+11:06:35.156 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:06:35.190 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:06:35.586 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+11:06:35.587 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+11:06:35.600 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+11:06:35.603 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+11:06:35.766 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:06:35.924 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11:06:37.290 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path ''
+11:06:37.691 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 4.401 seconds (process running for 1972.934)
+11:06:37.693 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+11:06:37.693 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully
+11:07:18.740 [File Watcher] INFO  org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+11:07:19.787 [Thread-9] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:07:19.943 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting Order Service Application...
+11:07:19.943 [restartedMain] DEBUG com.microservice.order.OrderApplication - Debug message from OrderApplication
+11:07:19.943 [restartedMain] WARN  com.microservice.order.OrderApplication - Warning message from OrderApplication
+11:07:19.943 [restartedMain] ERROR com.microservice.order.OrderApplication - Error message from OrderApplication
+11:07:20.359 [restartedMain] INFO  com.microservice.order.OrderApplication - Starting OrderApplication using Java 17.0.9 with PID 33964 (E:\TCG Java Training project\order\target\classes started by udit.prajapati in E:\TCG Java Training project\order)
+11:07:20.359 [restartedMain] DEBUG com.microservice.order.OrderApplication - Running with Spring Boot v3.2.12, Spring v6.1.15
+11:07:20.359 [restartedMain] INFO  com.microservice.order.OrderApplication - No active profile set, falling back to 1 default profile: "default"
+11:07:20.652 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:07:20.691 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
+11:07:20.755 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=a6901c53-1d3e-3e84-a5ac-c45b94fdd146
+11:07:21.095 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8085 (http)
+11:07:21.152 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 791 ms
+11:07:21.282 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:07:21.285 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:07:21.291 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:07:21.315 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+11:07:21.315 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+11:07:21.382 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:07:21.404 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:07:21.720 [restartedMain] INFO  com.microservice.order.config.ModelMapperConfig - Creating ModelMapper bean
+11:07:21.721 [restartedMain] DEBUG com.microservice.order.config.ModelMapperConfig - ModelMapper bean created successfully
+11:07:21.737 [restartedMain] INFO  com.microservice.order.config.RestTemplateConfig - Creating RestTemplate bean
+11:07:21.739 [restartedMain] DEBUG com.microservice.order.config.RestTemplateConfig - RestTemplate bean created successfully
+11:07:21.863 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:07:21.986 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11:07:23.331 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8085 (http) with context path ''
+11:07:23.709 [restartedMain] INFO  com.microservice.order.OrderApplication - Started OrderApplication in 3.762 seconds (process running for 2018.952)
+11:07:23.710 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+11:07:23.710 [restartedMain] INFO  com.microservice.order.OrderApplication - Order Service Application started successfully

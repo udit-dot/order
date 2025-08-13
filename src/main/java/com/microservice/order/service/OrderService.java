@@ -1,5 +1,6 @@
 package com.microservice.order.service;
 
+import java.net.http.HttpHeaders;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.microservice.order.feign.UserFeignClient;
@@ -217,43 +219,69 @@ public class OrderService {
 		}
 	}
 
-	public OrderDto cancelOrder(Integer orderId) {
-		logger.info("Cancelling order with ID: {}", orderId);
+	//Cancel order using RestTemplate (exchange/postForEntity)
+	public OrderDto cancelOrderWithRestTemplate(Integer orderId) {
+		logger.info("Cancelling order with ID (RestTemplate): {}", orderId);
 		try {
 			Order order = orderRepository.findById(orderId)
 					.orElseThrow(() -> new RuntimeException("Order not found with id: " + orderId));
 
+			// Restore inventory for each product in the order
 			if (order.getOrderLineItems() != null) {
 				for (OrderLineItem lineItem : order.getOrderLineItems()) {
-					try {
-						String productUrl = "http://localhost:8087/products/{id}";
-						ProductDto productDto = restTemplate.getForObject(productUrl, ProductDto.class,
-								lineItem.getProductId());
-
-						if (productDto == null || productDto.getInventory() == null) {
-							throw new RuntimeException(
-									"Product or inventory not found for ID: " + lineItem.getProductId());
-						}
-
-						Integer restoredQuantity = productDto.getInventory().getQuantity() + lineItem.getQuantity();
-						String inventoryUpdateUrl = "http://localhost:8087/inventory/"
-								+ productDto.getInventory().getInventoryId() + "/quantity?quantity=" + restoredQuantity;
-
-						logger.debug("Restoring inventory via URL: {}", inventoryUpdateUrl);
-						restTemplate.put(inventoryUpdateUrl, null);
-
-					} catch (Exception ex) {
-						logger.error("Failed to restore inventory for product ID: {}", lineItem.getProductId(), ex);
-						throw ex;
+					String productUrl = "http://localhost:8087/products/{id}";
+					ProductDto productDto = restTemplate.getForObject(productUrl, ProductDto.class,
+							lineItem.getProductId());
+					if (productDto == null || productDto.getInventory() == null) {
+						throw new RuntimeException("Product or inventory not found for ID: " + lineItem.getProductId());
 					}
+					Integer restoredQuantity = productDto.getInventory().getQuantity() + lineItem.getQuantity();
+					String inventoryUpdateUrl = "http://localhost:8087/inventory/"
+							+ productDto.getInventory().getInventoryId() + "/quantity?quantity=" + restoredQuantity;
+					org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
+					headers.set("content-type", "application/json");
+					org.springframework.http.HttpEntity<Void> request = new org.springframework.http.HttpEntity<>(
+							headers);
+					restTemplate.exchange(inventoryUpdateUrl, org.springframework.http.HttpMethod.PUT, request,
+							Void.class);
 				}
 			}
 			order.setStatus("CANCELLED");
 			Order cancelledOrder = orderRepository.save(order);
-			logger.info("Order with ID {} has been cancelled successfully.", orderId);
+			logger.info("Order with ID {} has been cancelled successfully (RestTemplate).", orderId);
 			return mapper.map(cancelledOrder, OrderDto.class);
 		} catch (Exception e) {
-			logger.error("Error occurred while cancelling order ID: {}", orderId, e);
+			logger.error("Error occurred while cancelling order ID (RestTemplate): {}", orderId, e);
+			throw e;
+		}
+	}
+
+	// Cancel order using Feign client
+	public OrderDto cancelOrderWithFeign(Integer orderId) {
+		logger.info("Cancelling order with ID (Feign): {}", orderId);
+		try {
+			Order order = orderRepository.findById(orderId)
+					.orElseThrow(() -> new RuntimeException("Order not found with id: " + orderId));
+
+			// Restore inventory for each product in the order
+			if (order.getOrderLineItems() != null) {
+				for (OrderLineItem lineItem : order.getOrderLineItems()) {
+					ProductDto productDto = productFeignClient.getProductById(lineItem.getProductId());
+					if (productDto == null || productDto.getInventory() == null) {
+						throw new RuntimeException("Product or inventory not found for ID: " + lineItem.getProductId());
+					}
+					Integer restoredQuantity = productDto.getInventory().getQuantity() + lineItem.getQuantity();
+					productFeignClient.updateInventoryQuantity(productDto.getInventory().getInventoryId(),
+							restoredQuantity);
+				}
+			}
+
+			order.setStatus("CANCELLED");
+			Order cancelledOrder = orderRepository.save(order);
+			logger.info("Order with ID {} has been cancelled successfully (Feign).", orderId);
+			return mapper.map(cancelledOrder, OrderDto.class);
+		} catch (Exception e) {
+			logger.error("Error occurred while cancelling order ID (Feign): {}", orderId, e);
 			throw e;
 		}
 	}

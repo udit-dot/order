@@ -58,7 +58,8 @@ public class OrderController {
 		logger.info("Received request to cancel order: {}", orderId);
 
 		try {
-			OrderDto cancelOrder = orderService.cancelOrder(orderId);
+			OrderDto cancelOrder = orderService.cancelOrderWithRestTemplate(orderId);
+//			OrderDto cancelOrder = orderService.cancelOrderWithFeign(orderId);
 			logger.info("Order deleted successfully with ID: {}", orderId);
 			return ResponseEntity.ok(cancelOrder);
 		} catch (Exception e) {
