@@ -1,6 +1,5 @@
 package com.microservice.order.service;
 
-import java.net.http.HttpHeaders;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +9,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import com.microservice.order.feign.UserFeignClient;
-import com.microservice.order.feign.ProductFeignClient;
 
 import com.microservice.order.dto.OrderDto;
 import com.microservice.order.dto.OrderLineItemDto;
@@ -22,7 +18,11 @@ import com.microservice.order.dto.ProductDto;
 import com.microservice.order.dto.UserDto;
 import com.microservice.order.entity.Order;
 import com.microservice.order.entity.OrderLineItem;
+import com.microservice.order.feign.ProductFeignClient;
+import com.microservice.order.feign.UserFeignClient;
 import com.microservice.order.repo.OrderRepository;
+
+import io.github.resilience4j.timelimiter.TimeLimiterRegistry;
 
 @Service
 public class OrderService {
@@ -43,6 +43,9 @@ public class OrderService {
 
 	@Autowired
 	ProductFeignClient productFeignClient;
+
+	@Autowired
+	private TimeLimiterRegistry timeLimiterRegistry;
 
 	// Example method using Feign client for user and product service
 	public OrderDto placeOrderWithFeign(OrderDto orderDto) {
@@ -104,19 +107,25 @@ public class OrderService {
 		}
 	}
 
-	public UserDto getUserFromOrderId(Integer orderId) {
+	public UserDto getUserFromOrderId(Integer orderId) throws Exception {
 		logger.debug("Getting User details for ID: {}", orderId);
 
 		try {
 			Order order = orderRepository.findById(orderId)
 					.orElseThrow(() -> new RuntimeException("Order not found with id: " + orderId));
+
+			// Rest Template call to user service
+//			String url = "http://localhost:8086/users/getUser/{id}";
+//			UserDto userDto = restTemplate.getForObject(url, UserDto.class, order.getUserId());
+
+			// Feign Client call to user service
 			UserDto userDto = userFeignClient.getUserById(order.getUserId());
 			if ("Unknown User (Fallback)".equals(userDto.getName())) {
 				logger.warn("User service unavailable, using fallback user for id: {}", order.getUserId());
 			}
 			return userDto;
 		} catch (Exception e) {
-			logger.error("Error occurred while getting order details for ID: {}", orderId, e);
+			logger.error("Error occurred while getting order details for ID: {} , {}", orderId, e.getMessage());
 			throw e;
 		}
 	}
@@ -219,7 +228,7 @@ public class OrderService {
 		}
 	}
 
-	//Cancel order using RestTemplate (exchange/postForEntity)
+	// Cancel order using RestTemplate (exchange/postForEntity)
 	public OrderDto cancelOrderWithRestTemplate(Integer orderId) {
 		logger.info("Cancelling order with ID (RestTemplate): {}", orderId);
 		try {
